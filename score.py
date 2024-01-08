@@ -16,9 +16,11 @@ def run_all_math():
 
     for folder in all_math_folder:
         ans_path = os.path.join(folder, 'solution.py')
-        print(f'below is ans for {folder}\n')
-        x=os.system( 'python '+ ans_path)
-        print(x)
+        print(ans_path)
+        # print(f'\n')
+        # print(f'below is solution for {folder}\n')
+        # os.system( 'python3 '+ ans_path)
+        
 
 
 
