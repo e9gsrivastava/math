@@ -9,20 +9,24 @@ def answer():
     return solver(1001)
 
 
-def solver(size):
+def solver(n):
     """What is the sum of the numbers on the diagonals in a n
     by n spiral formed in the same way"""
-    if size % 2 == 0:
-        return "enter odd num"
 
-    diagonal_sum = 1
-    current_value = 1
-    for i in range(3, size + 1, 2):
+    if n == 0:
+        return 0
+
+    current_value, diagonal_sum, total_sum = 1, 0, 0
+
+    if n % 2 != 0:
+        current_value, diagonal_sum, total_sum = 2, 1, 1
+
+    for layer in range(current_value, n, 2):
         for _ in range(4):
-            current_value += i - 1
-            diagonal_sum += current_value
+            diagonal_sum += layer
+            total_sum += diagonal_sum
 
-    return diagonal_sum
+    return total_sum
 
 
 if __name__ == "__main__":
