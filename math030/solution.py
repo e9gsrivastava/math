@@ -24,4 +24,4 @@ def solver(n):
 
 if __name__ == "__main__":
     print(answer())
-    print(solver())
+    print(solver(4))
