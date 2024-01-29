@@ -15,13 +15,13 @@ def solver():
         return ans
 
     result = []
-    for i in range(1000000):
+    for i in range(3,1000000):
         fact_sum = 0
         for j in str(i):
             fact_sum += fact(int(j))
         if fact_sum == i:
             result.append(fact_sum)
-    return result
+    return sum(result)
 
 
 if __name__ == "__main__":
