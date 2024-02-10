@@ -1,10 +1,14 @@
+"""Self Powers"""
+
 
 def answer():
-    s=0
-    for i in range(1,1000):
-        s+=i**i
+    """Find the last ten digits of the series"""
+    total_sum = 0
+    for i in range(1, 1000):
+        total_sum += i**i
 
-    print(str(s)[-10:])
+    return str(total_sum)[-10:]
 
-if __name__=='__main__':
+
+if __name__ == "__main__":
     print(answer())

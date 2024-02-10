@@ -1,26 +1,39 @@
-answer=[]
-pan_digital=['1', '2', '3', '4', '5', '6', '7', '8', '9']
-prod=[]
-ss=[]
+"""Pandigital Multiples"""
 
-for i in range(1,10000):
-    my_list=[]
-    for j in range(1,10):
-        my_list.extend(str(i*j))
-        if sorted(my_list)==pan_digital:
-            answer.append(i)
-            prod.append(j)
-            ss.append(my_list)
-            break
-        
-print(answer)
-result={answer[i]:prod[i] for i in range(len(answer))}
-print(result)
-print(ss)
-l=[]
-for i in ss:
-    k=''
-    k=''.join(i)
-    l.append(int(k))
 
-print(sorted(l)[-1])
+def find_largest_pandigital_product():
+    """
+    Finds the largest pandigital concatenated product of a number and its factors.
+
+    Returns:
+    int: The largest pandigital concatenated product.
+
+    This function iterates through base numbers up to 10,000 and checks
+      for pandigital concatenated products
+    by multiplying each base number by integers from 1 to 9. The result is
+      the largest pandigital concatenated product found.
+    """
+    pandigital_digits = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    candidate_numbers = []
+    product_factors = []
+    concatenated_products = []
+
+    for base_number in range(1, 10000):
+        current_digits = []
+        for multiplier in range(1, 10):
+            current_digits.extend(str(base_number * multiplier))
+            if sorted(current_digits) == pandigital_digits:
+                candidate_numbers.append(base_number)
+                product_factors.append(multiplier)
+                concatenated_products.append(current_digits)
+                break
+
+    concatenated_as_integers = [
+        int("".join(digits)) for digits in concatenated_products
+    ]
+
+    return sorted(concatenated_as_integers)[-1]
+
+
+if __name__ == "__main__":
+    print(find_largest_pandigital_product())
