@@ -1,4 +1,6 @@
-'''Goldbach's Other Conjecture'''
+"""Goldbach's Other Conjecture"""
+
+
 def odd_composite(num):
     """to find odd composite"""
     if num % 2 == 0:
@@ -17,6 +19,7 @@ def is_prime(num):
         if num % i == 0:
             return False
     return True
+
 
 def answer():
     """What is the smallest odd composite that cannot
@@ -37,6 +40,7 @@ def answer():
                 break
         if not found:
             return odd_comp
+    return 0
 
 
 if __name__ == "__main__":

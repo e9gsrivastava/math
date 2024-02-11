@@ -1,7 +1,9 @@
-'''Triangular, Pentagonal, and Hexagonal'''
+"""Triangular, Pentagonal, and Hexagonal"""
+
+
 def answer():
-    '''Find the next triangle number after 285 
-    that is also pentagonal and hexagonal.'''
+    """Find the next triangle number after 285
+    that is also pentagonal and hexagonal."""
     t_list = []
     p_list = []
     h_list = []
@@ -13,7 +15,8 @@ def answer():
     for i in t_list[285:]:
         if i in p_list and i in h_list:
             return int(i)
-        return 0
+    return 0
+
 
 if __name__ == "__main__":
     print(answer())

@@ -14,19 +14,16 @@ def find_largest_pandigital_product():
       the largest pandigital concatenated product found.
     """
     pandigital_digits = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
-    candidate_numbers = []
-    product_factors = []
     concatenated_products = []
 
-    for base_number in range(1, 10000):
+    for base_number in range(1, 10):
         current_digits = []
         for multiplier in range(1, 10):
-            current_digits.extend(str(base_number * multiplier))
+            current_digits.append(str(base_number * multiplier))
             if sorted(current_digits) == pandigital_digits:
-                candidate_numbers.append(base_number)
-                product_factors.append(multiplier)
                 concatenated_products.append(current_digits)
                 break
+        print(current_digits)
 
     concatenated_as_integers = [
         int("".join(digits)) for digits in concatenated_products

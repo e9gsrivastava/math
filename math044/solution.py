@@ -13,6 +13,7 @@ def answer():
             if j - i in p_list and i + j in p_list:
                 ans = j - i
                 return ans
+    return 0
 
 
 if __name__ == "__main__":
