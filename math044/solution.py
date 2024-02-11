@@ -1,4 +1,6 @@
 """Pentagon Numbers"""
+
+
 def answer():
     """find pentagon number pk,pj for which their sum and difference
     is also pentagon number"""

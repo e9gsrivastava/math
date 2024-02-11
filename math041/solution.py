@@ -1,4 +1,6 @@
-'''Pandigital Prime'''
+"""Pandigital Prime"""
+
+
 def is_prime(num):
     """to find the prime number"""
     if num < 2:
