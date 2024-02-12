@@ -1,28 +1,5 @@
 """this is find the nth prime no"""
 
-def answer():
-    """this func performs above func"""
-    a = 10001
-
-    def prime(n):
-        """this func finds prime no"""
-
-        if n < 2:
-            return False
-        for i in range(2, int(n ** (1 / 2) + 1)):
-            if n % i == 0:
-                return False
-        return True
-
-    x = []
-    n = 2
-    while a > len(x):
-        if prime(n):
-            x.append(n)
-
-        n += 1
-    return x[-1]
-
 
 def solver(n: int):
     """this func finds nth pirme func"""
@@ -31,7 +8,7 @@ def solver(n: int):
         """this func finds prime no"""
         if num < 2:
             return False
-        for i in range(2, int(num ** (1 / 2) + 1)):
+        for i in range(2, int(num**0.5 + 1)):
             if num % i == 0:
                 return False
         return True
@@ -46,6 +23,11 @@ def solver(n: int):
     return x[-1]
 
 
+def answer():
+    """this func performs above func"""
+    return solver(10001)
+
+
 if __name__ == "__main__":
-    print(solver(100001))
+    print(solver(1001))
     print(answer())

@@ -5,11 +5,15 @@ def answer():
     """this function finds Find the sum of all the positive integers which
     cannot be written as the sum of two abundant numbers."""
 
+    return solver(28123)
+
+
+def solver(n):
     abundant_list = []
 
-    for i in range(1, 28124):
+    for i in range(1, n+1):
         temp = 0
-        for j in range(1, i):
+        for j in range(1, int(i)):
             if i % j == 0:
                 temp += j
 
@@ -28,9 +32,6 @@ def answer():
     return sum(result)
 
 
-# def solver():
-#     return -1x
-
-
 if __name__ == "__main__":
     print(answer())
+    print(solver(28123))

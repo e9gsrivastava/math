@@ -31,22 +31,7 @@ def solver(p:int, q=None):
 def answer():
     """this is to find the sum of prime no"""
 
-    def prime(n):
-        """this function finds prime no"""
-        for i in range(2, int(n**0.5) + 1):
-            if n % i == 0:
-                return False
-        return True
-
-    num = 2000000
-    x = []
-    i = 2
-    while i < num:
-        if prime(i) is True:
-            x.append(i)
-        i += 1
-    return sum(x)
-
+    return solver(2,2000000)
 
 if __name__ == "__main__":
     print(answer())

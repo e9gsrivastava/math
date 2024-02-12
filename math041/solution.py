@@ -1,44 +1,40 @@
 """Pandigital Prime"""
 
 
-def is_prime(num):
+def is_prime(n):
     """to find the prime number"""
-    if num < 2:
+    if n < 2:
         return False
-    for i in range(2, int(num**0.5) + 1):
-        if num % i == 0:
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
             return False
     return True
 
+def all_permutations(digits):
+        """all permutations of a number"""
+        digits = list(str(digits))
 
-pandigital_list = [
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
-    ["1", "2", "3", "4", "5", "6", "7", "8"],
-    ["1", "2", "3", "4", "5", "6", "7"],
-    ["1", "2", "3", "4", "5", "6"],
-    ["1", "2", "3", "4", "5"],
-    ["1", "2", "3", "4"],
-    ["1", "2", "3"],
-    ["1", "2"],
-]
-
-
-def is_pandigital(num):
-    """to check if num is pandigital or not"""
-    num = str(num)
-    if sorted(num) in pandigital_list:
-        return True
-    return False
-
+        if len(digits) == 1:
+            return digits
+        all_perms = []
+        for d in digits:
+            removed = list(set(digits) - set([d]))
+            perms = [d + rmn for rmn in all_permutations("".join(removed))]
+            all_perms += perms
+        return all_perms
 
 def answer():
-    """largest n -digit pandigital prime that exists"""
-    result = 0
-    for number in range(11, 10000000):
-        if is_prime(number) and is_pandigital(number):
-            result = number
-    return result
-
+    for num in reversed(range(1,10)):
+        digits=''.join(str(i) for i in range(1,num+1) )
+        pan_d_list=all_permutations(int(digits))
+        for i in sorted(pan_d_list)[::-1]:
+            if is_prime(int(i)):
+                    return i
 
 if __name__ == "__main__":
     print(answer())
+
+
+
+
+
