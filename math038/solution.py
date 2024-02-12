@@ -23,7 +23,6 @@ def find_largest_pandigital_product():
             if sorted(current_digits) == pandigital_digits:
                 concatenated_products.append(current_digits)
                 break
-        print(current_digits)
 
     concatenated_as_integers = [
         int("".join(digits)) for digits in concatenated_products
