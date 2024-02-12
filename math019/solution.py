@@ -1,4 +1,4 @@
-"""this is find the num of Sundays"""
+"""Find the number of Sundays"""
 
 from datetime import date
 
@@ -10,14 +10,17 @@ def solver(start, end):
 
     start_year = start.year
     start_month = start.month
+<<<<<<< HEAD
     # start_day = start.day
+=======
+>>>>>>> 645844ff675f4c174b0933113b4eb3f525fe170a
     end_year = end.year
     end_month = end.month
     end_day = end.day
 
     sunday_count = 0
     current_day = 0
-
+    # pylint: disable=R1702
     for year in range(start_year, end_year + 1):
         is_leap_year = year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
 
@@ -37,6 +40,7 @@ def solver(start, end):
                             sunday_count += 1
 
                         current_day = (current_day + 1) % 7
+
     return sunday_count
 
 

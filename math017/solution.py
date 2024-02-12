@@ -1,13 +1,5 @@
-"""convert num to its spelling"""
-
-
 def solver(a, b):
-    """all the numbers from a to b
-    (one thousand) inclusive were written out in words,
-    how many letters would be used"""
-
     hash_dict = {
-        0: "zero",
         1: "one",
         2: "two",
         3: "three",
@@ -42,9 +34,10 @@ def solver(a, b):
     }
 
     def number_to_words(num):
-        """Converts a number into English spelling"""
+        if num == 0:
+            return ""
         if num < 0:
-            return "enter postive num "
+            return "enter positive num"
 
         if num <= 20:
             return hash_dict[num]
@@ -52,24 +45,21 @@ def solver(a, b):
         if num < 100:
             if num % 10 != 0:
                 return hash_dict[num // 10 * 10] + hash_dict[num % 10]
-
             return hash_dict[num // 10 * 10]
 
         if num < 1000:
             hundreds = number_to_words(num // 100) + hash_dict[100]
             rest = number_to_words(num % 100)
-            if rest:
-                return hundreds + rest
-
-            return hundreds
+            if rest and num % 100 != 0:
+                return hundreds + "and" + rest
+            return hundreds + rest
 
         if num < 1000000:
             thousands = number_to_words(num // 1000) + hash_dict[1000]
             rest = number_to_words(num % 1000)
-            if rest:
-                return thousands + rest
-
-            return thousands
+            if rest and num % 1000 != 0:
+                return thousands + "and" + rest
+            return thousands + rest
 
         if num < 1000000000:
             millions = number_to_words(num // 1000000) + hash_dict[1000000]
@@ -79,8 +69,12 @@ def solver(a, b):
 
             return millions
 
+<<<<<<< HEAD
         return "enter range less than 1 billion "
     
+=======
+        return "enter range less than 1 billion"
+>>>>>>> 645844ff675f4c174b0933113b4eb3f525fe170a
 
     total_letters=0
     
@@ -92,10 +86,6 @@ def solver(a, b):
     return total_letters
 
 def answer():
-    """all the numbers from 1 to 1000
-    (one thousand) inclusive were written out in words,
-    how many letters would be used"""
-
     return solver(1, 1000)
 
 
