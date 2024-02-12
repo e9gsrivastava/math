@@ -1,4 +1,6 @@
-'''this is to find lattice path '''
+"""this is to find lattice path """
+
+
 def solver(m: int, n: int):
     """this func sol for lattice path"""
 
@@ -26,7 +28,6 @@ def answer():
     return solver(20, 20)
 
 
-    
 if __name__ == "__main__":
     print(solver(20, 20))
     print(answer())

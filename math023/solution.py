@@ -9,9 +9,11 @@ def answer():
 
 
 def solver(n):
+    """this function finds Find the sum of all the positive integers which
+    cannot be written as the sum of two abundant numbers."""
     abundant_list = []
 
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         temp = 0
         for j in range(1, int(i)):
             if i % j == 0:

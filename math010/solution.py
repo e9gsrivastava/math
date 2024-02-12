@@ -1,7 +1,6 @@
 """this is to find the sum of prime no"""
 
-
-def solver(p:int, q=None):
+def solver(p, q=None):
     """this function performs above functionality"""
 
     def prime(n):
@@ -13,7 +12,7 @@ def solver(p:int, q=None):
                 return False
         return True
 
-    if type(p) != int or (q is not None and type(q) != int):
+    if not (isinstance(p, int) and (q is None or isinstance(q, int))):
         return None
 
     if q is None:
@@ -24,15 +23,12 @@ def solver(p:int, q=None):
     x = [num for num in num_range if prime(num)]
     return sum(x)
 
-
-
-
-
 def answer():
     """this is to find the sum of prime no"""
 
-    return solver(2,2000000)
+    return solver(2, 2000000)
+
 
 if __name__ == "__main__":
     print(answer())
-    print(solver(2,10))
+    print(solver(2, 10))

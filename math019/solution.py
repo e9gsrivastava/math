@@ -1,4 +1,4 @@
-'''this is find the num of Sundays'''
+"""this is find the num of Sundays"""
 
 from datetime import date
 
@@ -29,7 +29,6 @@ def solver(start, end):
 
             days = days_in_month[month]
             if year > start_year or (year == start_year and month >= start_month):
-
                 for day in range(1, days + 1):
                     if year < end_year or (
                         year == end_year and month <= end_month and day <= end_day

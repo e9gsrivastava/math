@@ -1,4 +1,6 @@
-'''Champernowne's Constant'''
+"""Champernowne's Constant"""
+
+
 def answer():
     """An irrational decimal fraction is created by concatenating the positive integers:"""
 

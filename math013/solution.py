@@ -1,8 +1,9 @@
+"""Work out the first ten digits of the sum of the following one-hundred 50-digit numbers. """
 
-'''Work out the first ten digits of the sum of the following one-hundred 50-digit numbers. '''
-def solver(x, num:list):
-    '''this func does above task'''
-    my_list=num
+
+def solver(x, num: list):
+    """this func does above task"""
+    my_list = num
     remainder = 0
     final_result = []
     for j in range(1, len(my_list[0]) + 1):
@@ -12,13 +13,13 @@ def solver(x, num:list):
         t_sum += remainder
         remainder = int(str(t_sum)[:-1])
         final_result.append(str(t_sum)[-1])
-    
-    if len(str(remainder))>1:
+
+    if len(str(remainder)) > 1:
         for i in range(len(str(remainder))):
             final_result.append(str(remainder)[i])
     else:
         final_result.append(str(remainder))
-    
+
     final_result = final_result[::-1]
     str_result = ""
     for i in final_result[:x]:
@@ -26,12 +27,9 @@ def solver(x, num:list):
     return str_result
 
 
-
-
-
 def answer():
-    '''Work out the first ten digits of the sum of the following
-    one-hundred 50-digit numbers. '''
+    """Work out the first ten digits of the sum of the following
+    one-hundred 50-digit numbers."""
     num = """37107287533902102798797998220837590246510135740250
     46376937677490009712648124896970078050417018260538
     74324986199524741059474233309513058123726617309629
@@ -137,10 +135,9 @@ def answer():
     for row in num.strip().split("\n"):
         my_list.append(row.strip())
 
-    return solver(10 , my_list)
-
+    return solver(10, my_list)
 
 
 if __name__ == "__main__":
-    print(solver(2, ['123','456','789']))
+    print(solver(2, ["123", "456", "789"]))
     print(answer())

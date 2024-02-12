@@ -1,4 +1,6 @@
-'''this is to calcualte the max product'''
+"""this is to calcualte the max product"""
+
+
 def solver(numgrid, n: int):
     """
     Return the greatest product of n adjacent numbers
@@ -7,7 +9,6 @@ def solver(numgrid, n: int):
     rows, cols = len(numgrid), len(numgrid[0])
     max_multi = 0
 
-    # right
     for i in range(rows):
         for j in range(cols - n + 1):
             product = 1
@@ -15,7 +16,7 @@ def solver(numgrid, n: int):
                 product *= numgrid[i][j + k]
             max_multi = max(max_multi, product)
 
-    # down
+
     for i in range(rows - n + 1):
         for j in range(cols):
             product = 1
@@ -23,7 +24,7 @@ def solver(numgrid, n: int):
                 product *= numgrid[i + k][j]
             max_multi = max(max_multi, product)
 
-    # diagonal right-down
+
     for i in range(rows - n + 1):
         for j in range(cols - n + 1):
             product = 1
@@ -31,7 +32,7 @@ def solver(numgrid, n: int):
                 product *= numgrid[i + k][j + k]
             max_multi = max(max_multi, product)
 
-    # diagonal right-up
+
     for i in range(n - 1, rows):
         for j in range(cols - n + 1):
             product = 1
@@ -43,10 +44,10 @@ def solver(numgrid, n: int):
 
 
 def answer():
-    '''this finds the the greatest product of four
-    adjacent numbers in the same direction '''
+    """this finds the the greatest product of four
+    adjacent numbers in the same direction"""
 
-    grid='''08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
+    grid = """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
             49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
             81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65
             52 70 95 23 04 60 11 42 69 24 68 56 01 32 56 71 37 02 36 91
@@ -65,22 +66,19 @@ def answer():
             04 42 16 73 38 25 39 11 24 94 72 18 08 46 29 32 40 62 76 36
             20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16
             20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
-            01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48'''
+            01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48"""
 
-    matrix=[]
+    matrix = []
 
-    for row in grid.strip().split('\n'):
-        each_cell=[]
+    for row in grid.strip().split("\n"):
+        each_cell = []
         for j in row.strip().split():
             each_cell.append(int(j))
         matrix.append(each_cell)
-    return solver(matrix,4)
-
-
+    return solver(matrix, 4)
 
 
 if __name__ == "__main__":
-    grid = [[1, 2, 3], [3, 4, 9], [5, 9, 7], [8, 7, 6]]
-    print(solver(grid, 3))
+    gridd = [[1, 2, 3], [3, 4, 9], [5, 9, 7], [8, 7, 6]]
+    print(solver(gridd, 3))
     print(answer())
-

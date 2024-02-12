@@ -1,13 +1,14 @@
 """this is to calacualte pythagorean triplet whose sum is 1000"""
+
+
 def answer():
     """this function does above task"""
     for i in range(1, 1000):
         for j in range(i, 1000):
             k = 1000 - i - j
             if i**2 + j**2 == k**2:
-                x=i * j * k
+                x = i * j * k
                 return x
-
 
 
 def solver(p, q=None):
@@ -33,5 +34,5 @@ def solver(p, q=None):
 
 
 if __name__ == "__main__":
-    print(solver(2,100))
+    print(solver(2, 100))
     print(answer())

@@ -10,7 +10,7 @@ def answer():
 def solver(names: str):
     """names is the name of the file with all the names for processing"""
 
-    with open(names, "r",encoding='utf-8') as f:
+    with open(names, "r", encoding="utf-8") as f:
         reader = f.read()
         names = [
             i[1 : len(i) - 2] if "\n" in i else i[1 : len(i) - 1]

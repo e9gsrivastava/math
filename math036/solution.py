@@ -18,5 +18,7 @@ def answer():
                 ans.append(i)
 
     return sum(ans)
-if __name__=='__main__':
+
+
+if __name__ == "__main__":
     print(answer())

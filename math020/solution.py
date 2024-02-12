@@ -6,8 +6,8 @@ def solver(n):
     nums = [1]
     for i in range(1, n + 1):
         carry = 0
-        for j in range(len(nums)):
-            temp = nums[j] * i + carry
+        for j, num in enumerate(nums):
+            temp = num * i + carry
             nums[j] = temp % 10
             carry = temp // 10
         while carry > 0:
@@ -15,7 +15,6 @@ def solver(n):
             carry //= 10
 
     return sum(nums)
-
 
 
 def answer():

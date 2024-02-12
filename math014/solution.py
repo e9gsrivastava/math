@@ -1,6 +1,7 @@
 """he number which returns the longest collatz sequence such that the number is between 
 (a) 1 and p if only p is defined and (b) p and q if both p and q are defined"""
 
+
 def collatz(n, hash_dict):
     """this finds one less than collatz no's length"""
 
@@ -43,9 +44,6 @@ def answer():
     return solver(1000000)
 
 
-
-
-
-if __name__=='__main__':
+if __name__ == "__main__":
     print(solver(2, 1000000))
     print(answer())

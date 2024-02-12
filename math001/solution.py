@@ -1,6 +1,8 @@
-'''answer func'''
+"""answer func"""
+
+
 def answer():
-    '''this finds facotrs'''
+    """this finds facotrs"""
     x = []
     y = []
     for i in range(1000):
@@ -12,9 +14,8 @@ def answer():
     return sum(x + y)
 
 
-
 def solver(factors, start, end):
-    '''this finds facotrs'''
+    """this finds facotrs"""
     total_sum = 0
     for i in range(start, end + 1):
         if any(i % fact == 0 for fact in factors):

@@ -1,5 +1,6 @@
 """this is used to solve ssum of odd even  """
 
+
 def solver(start, end, even=False, odd=False):
     # x=1, 2, 3, 5, 8, 13, 21, 34, 55, 89
     """this func solves  odd or even sum based on condition"""
@@ -33,10 +34,8 @@ def solver(start, end, even=False, odd=False):
         return None
 
 
-
-
 def answer():
-    '''this is to solve '''
+    """this is to solve"""
     a = 1
     b = 2
     s = 0
@@ -49,5 +48,5 @@ def answer():
 
 
 if __name__ == "__main__":
-    # print(answer())
+    print(answer())
     print(solver(10, 10000, even=False, odd=True))

@@ -1,5 +1,5 @@
-
 """to find highest palindrome of n digit """
+
 
 def answer():
     """this finds palindrome"""
@@ -12,7 +12,6 @@ def answer():
                     result = i * j
 
     return result
-
 
 
 def solver(n, p=None, q=None):

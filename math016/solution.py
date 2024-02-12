@@ -1,8 +1,10 @@
 """this is to find 2**n where n is a very large no """
+
+
 def solver(n):
     """this func does above task"""
     num = [2]
-    if n==0:
+    if n == 0:
         return 1
     for _ in range(n - 1):
         remainder = 0
@@ -18,9 +20,6 @@ def answer():
     """this func calls generic func to get the value of 2**100"""
 
     return solver(1000)
-
-
-
 
 
 if __name__ == "__main__":

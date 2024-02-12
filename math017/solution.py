@@ -1,5 +1,6 @@
+"""convert num to its spelling"""
 
-'''convert num to its spelling'''
+
 def solver(a, b):
     """all the numbers from a to b
     (one thousand) inclusive were written out in words,
@@ -92,11 +93,6 @@ def answer():
     return solver(1, 1000)
 
 
-
-
 if __name__ == "__main__":
     print(solver(1, 2))
     print(answer())
-
-
-

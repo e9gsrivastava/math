@@ -4,11 +4,12 @@ Quadratic Primes
 
 
 def answer():
-    '''Find the product of the coefficients,a and b, 
+    """Find the product of the coefficients,a and b,
     for the quadratic expression that produces the maximum number of
-      primes for consecutive values of n, starting with n=0.'''
+      primes for consecutive values of n, starting with n=0."""
+
     def is_prime(n):
-        '''func to find prime num'''
+        """func to find prime num"""
         if n <= 0:
             return False
         for i in range(2, int(n**0.5) + 1):

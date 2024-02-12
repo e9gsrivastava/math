@@ -4,16 +4,17 @@
 
 
 def answer():
-    '''What is the index of the first term in the Fibonacci sequence to contain 
-        1000 digits?'''
+    """What is the index of the first term in the Fibonacci sequence to contain
+    1000 digits?"""
     return solver(1000)
 
 
 def solver(length: int):
-    '''Generalize the solution in Part A to identify
-    the first term in the Fibonacci sequence to contain ndigits.'''
+    """Generalize the solution in Part A to identify
+    the first term in the Fibonacci sequence to contain ndigits."""
+
     def add_large_digits(num1, num2):
-        '''func to add two nums unit digitwise'''
+        """func to add two nums unit digitwise"""
         num1, num2 = str(num1), str(num2)
         result = []
         carry = 0
@@ -41,7 +42,7 @@ def solver(length: int):
         return int(final)
 
     def fibonacci(length):
-        '''func to find fibonacci series'''
+        """func to find fibonacci series"""
         x, y = 1, 1
         index = 2
         while True:

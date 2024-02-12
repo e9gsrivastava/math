@@ -1,5 +1,5 @@
-'''this function finds the What is the value of the
-first triangle number to have over five hundred divisors?'''
+"""this function finds the What is the value of the
+first triangle number to have over five hundred divisors?"""
 
 
 def solver(req_divisors):
@@ -26,10 +26,6 @@ def solver(req_divisors):
             return t_sum
 
 
-
-
-
-
 def answer():
     """first triangle number to have over five hundred divisors?"""
     req_divisors = 500
@@ -51,7 +47,6 @@ def answer():
         i += 1
         if find_factors(t_sum) > req_divisors:
             return t_sum
-
 
 
 if __name__ == "__main__":
