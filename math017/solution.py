@@ -80,10 +80,16 @@ def solver(a, b):
             return millions
 
         return "enter range less than 1 billion "
+    
 
-    total_letters = [len(number_to_words(i)) for i in range(a, b + 1)]
-    return sum(total_letters)
+    total_letters=0
+    
+    for i in range(a,b+1):
+        if i>100 and i%100!=0:
+            total_letters+=3
+        total_letters+=len(number_to_words(i))
 
+    return total_letters
 
 def answer():
     """all the numbers from 1 to 1000

@@ -16,7 +16,6 @@ def solver(numgrid, n: int):
                 product *= numgrid[i][j + k]
             max_multi = max(max_multi, product)
 
-
     for i in range(rows - n + 1):
         for j in range(cols):
             product = 1
@@ -24,14 +23,12 @@ def solver(numgrid, n: int):
                 product *= numgrid[i + k][j]
             max_multi = max(max_multi, product)
 
-
     for i in range(rows - n + 1):
         for j in range(cols - n + 1):
             product = 1
             for k in range(n):
                 product *= numgrid[i + k][j + k]
             max_multi = max(max_multi, product)
-
 
     for i in range(n - 1, rows):
         for j in range(cols - n + 1):

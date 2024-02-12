@@ -14,3 +14,7 @@ solver.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 
 -------------------------------------------------------------------
 Your code has been rated at 9.68/10 (previous run: 10.00/10, -0.32)
+(venv) fox@enine014:~/math/math011$ pylint solution.py 
+
+-------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 9.64/10, +0.36)

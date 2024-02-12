@@ -10,7 +10,7 @@ def solver(start, end):
 
     start_year = start.year
     start_month = start.month
-    start_day = start.day
+    # start_day = start.day
     end_year = end.year
     end_month = end.month
     end_day = end.day

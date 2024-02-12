@@ -1,5 +1,6 @@
 """this is to find the sum of prime no"""
 
+
 def solver(p, q=None):
     """this function performs above functionality"""
 
@@ -22,6 +23,7 @@ def solver(p, q=None):
 
     x = [num for num in num_range if prime(num)]
     return sum(x)
+
 
 def answer():
     """this is to find the sum of prime no"""
