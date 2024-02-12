@@ -18,20 +18,19 @@ def solver(start, end, even=False, odd=False):
     if start > end:
         return None
 
-    else:
-        for i in l:
-            if i % 2 == 0 and i > start:
-                se += i
-            elif i % 2 != 0 and i > start:
-                so += i
+    for i in l:
+        if i % 2 == 0 and i > start:
+            se += i
+        elif i % 2 != 0 and i > start:
+            so += i
     if even is True and odd is True:
         return se, so
-    elif odd is True and even is False:
+    if odd is True and even is False:
         return so, se
-    elif odd is True and even is False:
+    if odd is True and even is False:
         return so, se
-    else:
-        return None
+
+    return None
 
 
 def answer():

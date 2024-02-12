@@ -7,8 +7,7 @@ def solver(p, q):
     def gcd(a, b):
         if b == 0:
             return a
-        else:
-            return gcd(b, a % b)
+        return gcd(b, a % b)
 
     s = 1
     for i in range(min(p, q), max(p, q) + 1):
@@ -24,8 +23,8 @@ def answer():
     def gcd(a, b):
         if b == 0:
             return a
-        else:
-            return gcd(b, a % b)
+
+        return gcd(b, a % b)
 
     s = 1
     for i in range(min(p, q), max(p, q) + 1):

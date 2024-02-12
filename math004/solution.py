@@ -35,7 +35,7 @@ def solver(n, p=None, q=None):
                         result = i * j
         return result
 
-
+    return -1
 if __name__ == "__main__":
     print(solver(3, 100, 200))
     print(answer())

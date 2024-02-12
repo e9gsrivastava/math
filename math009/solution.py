@@ -9,7 +9,7 @@ def answer():
             if i**2 + j**2 == k**2:
                 x = i * j * k
                 return x
-
+    return -1
 
 def solver(p, q=None):
     """calacualte pythagorean triplet"""
