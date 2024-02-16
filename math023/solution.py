@@ -36,4 +36,4 @@ def solver(n):
 
 if __name__ == "__main__":
     print(answer())
-    print(solver(28123))
+    print(solver(123))

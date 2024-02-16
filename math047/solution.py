@@ -29,7 +29,7 @@ def find_consecutive_numbers():
     What is the first of these numbers?"""
     prime_list = [i for i in range(10000) if is_prime(i)]
 
-    for i in range(130000, 140000):
+    for i in range(100000, 150000):
         if all(distinct_prime_factors_count(i + j, prime_list) == 4 for j in range(4)):
             return i
     return 0

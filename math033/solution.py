@@ -67,6 +67,7 @@ def solver():
                     and num not in ten_list
                     and den not in ten_list
                 ):
+                    # return int(str(num)[0]) / int(str(den)[0])
                     return int(str(num)[0]) / int(str(den)[0])
         return 0
 
@@ -76,6 +77,7 @@ def solver():
             if special_div(num, den) != 0:
                 mylist.append(special_div(num, den))
 
+    print(mylist)
     def gcd(num, den):
         """This function takes two arguments num and den and returns
         the greatest common divisor of num and den."""
