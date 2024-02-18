@@ -28,7 +28,7 @@ The four adjacent digits in the below 1,000-digit number that have the greatest 
 
 ## Part A
 
-Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
+Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product??
 
 ```
 answer()
