@@ -78,6 +78,7 @@ def solver():
                 mylist.append(special_div(num, den))
 
     print(mylist)
+
     def gcd(num, den):
         """This function takes two arguments num and den and returns
         the greatest common divisor of num and den."""

@@ -11,6 +11,7 @@ def answer():
                 return x
     return -1
 
+
 def solver(p, q=None):
     """calacualte pythagorean triplet"""
     my_dict = {}

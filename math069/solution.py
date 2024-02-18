@@ -1,36 +1,60 @@
+"""
+Totient Maximum
+"""
+def is_prime(num):
+    """
+    to chcek if a num is prime
+    """
+    for i in range(2, num):
+        if num % i != 0:
+            return False
+    return True
+
+
 
 def gcd(a, b):
     """
-    this func finds the gcd
+    This function finds the greatest common divisor (gcd).
     """
     while b:
         a, b = b, a % b
     return a
 
-def number_relative_prime(num):
+
+def euler_totient(n):
     """
-    this func finds the number of relative primes
+    Euler's Totient Function to count numbers relatively prime to n.
     """
-    c=1
-    for i in range(2,num):
-        if gcd(num,i)==1:
-            c+=1
-    return c
-def is_prime(num):
-    for i in range(2,num):
-        if num%i!=0:
-            return False
-    return True
+    result = n
+    p = 2
+    while p * p <= n:
+        if n % p == 0:
+            while n % p == 0:
+                n //= p
+            result -= result // p
+        p += 1
+    if n > 1:
+        result -= result // n
+    return result
 
-def answer():
-    max_totient=0
-    for i in range(1000000):
-        if not is_prime(i): 
-            c=i/number_relative_prime(i)
-            if c>max_totient:
-                max_totient=max(c,max_totient)
 
-    return max_totient
+def answer(limit):
+    """
+    Find the value of n<=1000000
+    for which n/phi(n)
+    is a maximum.
+    """
+    max_totient = 0
+    max_i = 0
+    for i in range(2, limit):
+        if not is_prime(i):
+            totient = i / euler_totient(i)
+            if totient > max_totient:
+                max_totient = totient
+                max_i = i
 
-if __name__=="__main__":
-    print(answer())
+    return max_i
+
+
+if __name__ == "__main__":
+    print(answer(1000000))
