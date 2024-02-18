@@ -2,6 +2,7 @@
 Cubic Permutations
 """
 
+
 def answer():
     """
     Find the smallest cube for which exactly five
@@ -24,5 +25,6 @@ def answer():
 
         n += 1
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     print(answer())

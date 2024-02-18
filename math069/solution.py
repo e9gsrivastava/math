@@ -1,6 +1,8 @@
 """
 Totient Maximum
 """
+
+
 def is_prime(num):
     """
     to chcek if a num is prime
@@ -9,7 +11,6 @@ def is_prime(num):
         if num % i != 0:
             return False
     return True
-
 
 
 def gcd(a, b):

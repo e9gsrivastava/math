@@ -2,6 +2,7 @@
 Permuted Multiples
 """
 
+
 def same_digits(n1, n2):
     """
     to chcek if two nums have same digits

@@ -1,6 +1,8 @@
 """
 Square Root Convergents
 """
+
+
 def answer():
     """
     In the first one-thousand expansions,

@@ -1,6 +1,8 @@
 """
 Prime Pair Sets
 """
+
+
 def is_prime(n):
     """to check if a num is prime"""
     if n < 2:
@@ -49,6 +51,7 @@ def answer():
                                                     ):
                                                         return sum([p1, p2, p3, p4, p5])
     return -1
+
 
 if __name__ == "__main__":
     print(answer())

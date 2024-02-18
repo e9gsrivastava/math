@@ -1,6 +1,8 @@
 """
 Ordered Fractions
 """
+
+
 def answer():
     """
     By listing the set of reduced proper fractions for d<=1000000
@@ -22,5 +24,6 @@ def answer():
 
     return closest_numerator
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     print(answer())

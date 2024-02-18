@@ -1,6 +1,8 @@
 """
 Powerful Digit Sum
 """
+
+
 def find_digits_sum(num):
     """
     find the sum of digits of a num

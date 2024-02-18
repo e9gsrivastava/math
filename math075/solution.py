@@ -1,13 +1,15 @@
 """
 Singular Integer Right Triangles
 """
+
+
 def answer():
     """
     Given that L
     is the length of the wire, for how many values of L<=1500000
     can exactly one integer sided right angle triangle be formed?
     """
-    limit=1500000
+    limit = 1500000
     count = 0
     perimeters = [0] * (limit + 1)
 
@@ -22,5 +24,6 @@ def answer():
     count = sum(1 for p in perimeters if p == 1)
     return count
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     print(answer())

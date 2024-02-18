@@ -2,10 +2,11 @@
 Powerful Digit Counts
 """
 
+
 def answer():
     """
     How many n-digit positive
-    integers exist which are also an 
+    integers exist which are also an
     nth power?
     """
     c = 0
@@ -16,5 +17,6 @@ def answer():
             j += 1
     return c
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     print(answer())

@@ -1,6 +1,8 @@
 """
 Counting Fractions
 """
+
+
 def euler_totient(n):
     """
     Euler's Totient Function to count numbers relatively prime to n
@@ -22,12 +24,13 @@ def answer():
     """How many elements would be contained in
     the set of reduced proper fractions for d<=1000000
     """
-    limit=1000000
+    limit = 1000000
     count = 0
     for d in range(2, limit + 1):
         count += euler_totient(d)
 
     return count
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     print(answer())

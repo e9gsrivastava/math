@@ -2,6 +2,7 @@
 Combinatoric Selections
 """
 
+
 def factorial(num):
     """
     this finds factorial of a num
